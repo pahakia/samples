@@ -40,7 +40,7 @@
     <button class="g-signin"
         data-scope="https://www.googleapis.com/auth/plus.login"
         data-requestvisibleactions="http://schemas.google.com/AddActivity"
-        data-clientId="{{ CLIENT_ID }}"
+        data-clientId="{{ YOUR_CLIENT_ID }}"
         data-accesstype="offline"
         data-callback="onSignInCallback"
         data-theme="dark"
@@ -207,7 +207,7 @@ var helper = (function() {
  */
 $(document).ready(function() {
   $('#disconnect').click(helper.disconnectServer);
-  if ($('[data-clientid="CLIENT_ID"]').length > 0) {
+  if ($('[data-clientid="YOUR_CLIENT_ID"]').length > 0) {
     alert('This sample requires your OAuth credentials (client ID) ' +
         'from the Google APIs console:\n' +
         '    https://code.google.com/apis/console/#:access\n\n' +
