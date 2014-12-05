@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+    <persistence-unit name="pahakia" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <class>pahakia.example.jpa.entity.BookEntity</class>
+        <properties>
+            <property name="eclipselink.target-database" value="Derby"/>
+            <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:derby:target/derbyDB;create=true"/>
+            <property name="eclipselink.jdbc.native-sql" value="true" />
+            <property name="eclipselink.jdbc.cache-statements" value="true" />
+            <property name="eclipselink.logging.level" value="WARNING"/>
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+            
+<!-- 
+            <property name="eclipselink.cache.shared.default" value="false"/> 
+            <property name="eclipselink.weaving" value="false"/>
+            <property name="eclipselink.weaving.internal" value="false"/>
+ -->
+         </properties>
+    </persistence-unit>
+</persistence>
